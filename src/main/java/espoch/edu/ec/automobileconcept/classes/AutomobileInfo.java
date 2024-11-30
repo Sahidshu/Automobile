@@ -15,4 +15,8 @@ public class AutomobileInfo {
     private int doorNum;
     private double currentV;
     private double maxV;
+    
+    {
+        System.out.println("probando rama");
+    }
 }
