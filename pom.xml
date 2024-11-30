@@ -10,4 +10,5 @@
         <maven.compiler.release>17</maven.compiler.release>
         <exec.mainClass>espoch.edu.ec.automobile.Automobile</exec.mainClass>
     </properties>
+    <name>Automobile</name>
 </project>
