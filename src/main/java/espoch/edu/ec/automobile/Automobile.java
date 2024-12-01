@@ -14,9 +14,7 @@ import java.util.Scanner;
 public class Automobile {
 
     public static void main(String[] args) {
-        
-         Scanner scanner = new Scanner(System.in);
-        
+                
         AutomInfo objAutomInfo= new AutomInfo();
         objAutomInfo.setBrand("Audi");
         objAutomInfo.setModel("RS6 Avant Mansory/MTM edition");
@@ -24,16 +22,25 @@ public class Automobile {
         objAutomInfo.setDoorsNum(5);
         objAutomInfo.setSeatsNum(5);
         objAutomInfo.setMaxV(330);
+        objAutomInfo.setCurrentV(100);
+        objAutomInfo.setDistance(623);
         
         objAutomInfo.printValues();
         
+        objAutomInfo.estimatedTime();
+        
         System.out.print("Acelerando: ");
-        double increment1 = scanner.nextDouble();
+        double increment1 = 20;
         objAutomInfo.accelerate(increment1);
+        
                     
         System.out.print("Desacelerando: ");
-        double decrement = scanner.nextDouble();
+        double decrement = 50;
         objAutomInfo.decelerate(decrement);
+        
+        objAutomInfo.brake();
+        
+      
         
        
         
