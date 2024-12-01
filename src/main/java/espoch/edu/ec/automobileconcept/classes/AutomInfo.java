@@ -24,6 +24,7 @@ public class AutomInfo {
     private FuelType fuelType;
     private AutomobileType automobileType;
     private Coulor coulor;
+    private double distance;
 
     public Coulor getCoulor() {
         return coulor;
@@ -69,6 +70,14 @@ public class AutomInfo {
         return engine;
     }
 
+    public double getDistance() {
+        return distance;
+    }
+
+    public void setDistance(double distance) {
+        this.distance = distance;
+    }
+
     public void setEngine(String engine) {
         this.engine = engine;
     }
@@ -107,6 +116,7 @@ public class AutomInfo {
     
     public void printValues() {
         System.out.println("Informacion del Automovil");
+        System.out.println("");
         System.out.println("Marca: " + brand);
         System.out.println("Modelo: " + model);
         System.out.println("Motor: "+ engine);
@@ -116,18 +126,31 @@ public class AutomInfo {
         System.out.println("Cantidad de Asientos: " + seatsNum);
         System.out.println("Velocidad Máxima: " + maxV + " km/h");
         System.out.println("Color: " + Coulor.NEGRO);
+        System.out.println("");
+        System.out.println("Distancia a recorrer: "+distance+" km");
         System.out.println("Velocidad Actual: " + currentV + " km/h");
     }
-    
+      
      public void accelerate(double increment1) {
         
         if (currentV + increment1 > maxV) {
             System.out.println("Haz sobrepasado el limite maximo de velocidad: " + maxV + " km/h.");
         } else {
             currentV += increment1;
-            System.out.println("Acelerando... Velocidad actual: " + currentV + " km/h.");
+            System.out.println("Velocidad actual: " + currentV + " km/h.");
         }
     }
+         public void estimatedTime() {
+    if (currentV > 0) {
+        double time = distance / currentV; 
+        int hours = (int) time;
+        int minutes = (int) ((time - hours) * 60);
+        System.out.println("Tiempo estimado de llegada: " + hours + " horas y " + minutes + " minutos.");
+    } else {
+        System.out.println("El auto esta detenido");
+    }
+             System.out.println("");
+}
 
     public void decelerate(double decrement) {
         
@@ -135,11 +158,17 @@ public class AutomInfo {
             System.out.println("No es posible desacelerar mas");
         } else {
             currentV -= decrement;
-            System.out.println("Desacelerando... Velocidad actual: " + currentV + " km/h.");
+            System.out.println("Velocidad actual: " + currentV + " km/h.");
         }
     }
-    
-    
-      
-    
+     
+    public void brake() {
+    if (currentV > 0) {
+        System.out.println("Frenando...");
+        currentV = 0;
+        System.out.println("El automóvil se ha detenido. Velocidad actual: " + currentV + " km/h.");
+    } else {
+        System.out.println("El automóvil ya está detenido.");
+    }
+    }    
 }
