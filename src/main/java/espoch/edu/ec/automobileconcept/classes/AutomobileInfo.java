@@ -15,8 +15,24 @@ public class AutomobileInfo {
     private int doorNum;
     private double currentV;
     private double maxV;
-    private String stripe;
-    private String mazda;
+    
+    public class main {
+        public void main(String[] args){
+            
+             AutomobileInfo objAutomInfo = new AutomobileInfo();
+            
+            objAutomInfo.setBrand("Mazda");
+            objAutomInfo.setModel("mazda");
+            
+            
+            
+            
+        }
+        
+        
+        
+        
+    }
 
     public String getBrand() {
         return brand;
@@ -66,22 +82,11 @@ public class AutomobileInfo {
         this.maxV = maxV;
     }
 
-    public String getStripe() {
-        return stripe;
-    }
-
-    public void setStripe(String stripe) {
-        this.stripe = stripe;
-    }
-
-    public String getMazda() {
-        return mazda;
-    }
-
-    public void setMazda(String mazda) {
-        this.mazda = mazda;
-    }
     
+
+    
+    
+ 
         
     
 
