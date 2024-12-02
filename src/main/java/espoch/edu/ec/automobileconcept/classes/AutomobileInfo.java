@@ -21,7 +21,7 @@ public class AutomobileInfo {
             
              AutomobileInfo objAutomInfo = new AutomobileInfo();
             
-            objAutomInfo.setBrand("Mazda");
+            objAutomInfo.setBrand("marci");
             objAutomInfo.setModel("mazda");
             
             
